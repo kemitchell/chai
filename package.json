@@ -32,6 +32,7 @@
   },
   "devDependencies": {
       "component": "*"
+    , "check-versions": "*"
     , "karma": "0.12.x"
     , "karma-mocha": "*"
     , "karma-sauce-launcher": "0.2.x"

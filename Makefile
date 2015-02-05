@@ -36,7 +36,7 @@ components: node_modules component.json
 # Tests
 #
 
-test: test-node test-phantom
+test: test-node test-phantom check-versions
 
 test-node: node_modules
 	@printf "==> [Test :: Node.js]\n"
@@ -64,6 +64,9 @@ test-travisci:
 	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
 	@make test-cov
 	@make test-sauce
+
+check-versions:
+	@./node_modules/.bin/check-versions --check-module .
 
 #
 # Clean up
